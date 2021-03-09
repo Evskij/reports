@@ -21,7 +21,8 @@ This web-servis create report for NLMK Kaluga from production system MES.
 * NodeJs
 * Yarn
 * React
+    * react-bootstrap
+    * react-router-dom
+    * styled-components
 # Install project:
-```bash
-mvn install
-```
+`mvn install`
