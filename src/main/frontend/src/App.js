@@ -5,9 +5,10 @@ import {
   Route
 } from 'react-router-dom';
 
-import NaviBar from './Components/Navibar';
-import {Espc} from './Page/Espc'
-import {Pc} from './Page/Pc'
+import NaviBar from './components/Navibar';
+import {Home} from './page/Home'
+import {UppLom} from './page/UppLom'
+import {Pc} from './page/Pc'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,7 +17,8 @@ function App() {
     <Router>
       <NaviBar/>
         <Switch>
-          <Route path="/espc" component={Espc}/>
+          <Route exact path="/" component={Home}/>
+          <Route path="/upplom" component={UppLom}/>
           <Route path="/pc" component={Pc}/>
         </Switch>
     </Router>
