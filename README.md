@@ -24,5 +24,8 @@ This web-servis create report for NLMK Kaluga from production system MES.
     * react-bootstrap
     * react-router-dom
     * styled-components
+    * material-table
+    * @material-ui/core
+    * @material-ui/icons
 # Install project:
 `mvn install`
