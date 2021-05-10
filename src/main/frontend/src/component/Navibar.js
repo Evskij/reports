@@ -12,7 +12,7 @@ export default function NaviBar() {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" fixed="top">
                 <Container>
                 <Navbar.Brand href="/">
                     <img
@@ -26,24 +26,22 @@ export default function NaviBar() {
                 <Nav className="mr-auto">
                     <NavDropdown title="Отчёты ЭСПЦ" id="collasible-nav-dropdown">
                         <NavDropdown.Item><Link to="/scraplog">УПП учёт лома</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">УПП отчёт по смене</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.4">УВиВОС отчёт по смене</NavDropdown.Item>
+                        <NavDropdown.Item><Link to ="/upp">УПП отчёт по смене</Link></NavDropdown.Item>
+                        <NavDropdown.Item> <Link to ="/dsp">УВиВОС отчёт по смене</Link></NavDropdown.Item>
                     </NavDropdown>
 
                     <NavDropdown title="Отчёты ПЦ" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Отчёт 1</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Отчёт 2</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Отчёт 3</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Отчёт 4</NavDropdown.Item>
+                        <NavDropdown.Item><Link to = "/pc">Отчёт ПЦ</Link></NavDropdown.Item>
+                        
                     </NavDropdown>  
                 </Nav>
                 <Nav>
-                    <Button type="submit" onClick={handleShow}>Войти</Button>
+                    <Button type="submit" variant="success" onClick={handleShow}>Войти</Button>
                 </Nav>
                 </Navbar.Collapse>
                 </Container>
             </Navbar>
+
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Войти в систему</Modal.Title>
@@ -52,7 +50,7 @@ export default function NaviBar() {
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Введите адрес эектронной почты" />
+                        <Form.Control type="email" placeholder="Введите адрес электронной почты" />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
@@ -60,7 +58,7 @@ export default function NaviBar() {
                         <Form.Control type="password" placeholder="Введите пароль" />
                     </Form.Group>
                     <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Запонить меня" />
+                        <Form.Check type="checkbox" label="Запомнить меня" />
                     </Form.Group>
                 </Form>
     
